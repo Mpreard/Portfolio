@@ -1,0 +1,305 @@
+@font-face {
+    font-family: Edelsans;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/edelsans_regular-webfont.woff);
+  }
+html{
+    scroll-behavior: smooth;
+}
+  body { 
+    margin: 0;
+    font-family: Edelsans, Avenir, sans-serif;
+  }
+  section { 
+    height: 100vh; 
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    flex-direction: column;
+    padding: 2vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 3vw; 
+  }
+  section:first-of-type { 
+    text-transform: uppercase;
+    font-size: 7vw;
+  }
+  section:first-of-type, section.pop { 
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0,0.4); 
+  }
+  section:nth-of-type(even) { 
+    background: #fff;
+  }
+  section:nth-of-type(1) { 
+    background-image: url(../img/fond1.jpg); 
+  }
+  section:nth-of-type(3) { 
+    background-image: url(../img/fond2.jpg); 
+  }
+  section:nth-of-type(5) { 
+    background-image: url(../img/space1.jpg); 
+  }
+  section:nth-of-type(7){
+    background-image:url(../img/fond3.jpg);
+  }
+
+#nom{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 65%;
+  }
+#annee{
+    font-size: 20%;
+    font-family: 'Montserrat', sans-serif;
+  }
+#photo{
+    width: 25%;
+    height: auto;
+    border-radius: 55%;
+  }
+.pop{
+  position: relative;
+}
+
+#boulot{
+    color:white;
+    text-align: center;
+}
+
+#boulot h2{
+    font-weight: bold;
+    font-size: 100%;
+}
+
+#boulot p {
+    color: white;
+    font-size: 35%;
+}
+
+#fif{
+  position: relative;
+}
+
+#formation h2{
+  color:black;
+  font-size:50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: 'Bai Jamjuree', sans-serif;
+  text-decoration:underline;
+  text-decoration-color: black;
+}
+#mesformations{
+  color:black;
+  font-size:50%;
+  left: 0;;
+  top: 0;
+}
+.fromLeft {
+  opacity:0;
+  transform: translate(-1000px, -100px);
+  transition: transform 1100ms ease-out, opacity 150ms ease-out;
+}
+.fromLeft.visible {
+  opacity:1;
+  transform: translate(-152px,-100px);
+}
+
+.fromLeft1 {
+  opacity:0;
+  transform: translate(-1000px, -150px);
+  transition: transform 1100ms ease-out, opacity 150ms ease-out;
+}
+.fromLeft1.visible1 {
+  opacity:1;
+  transform: translate(-152px,-140px);
+}
+
+.fromLeft2 {
+  opacity:0;
+  transform: translate(-1000px, -35px);
+  transition: transform 1100ms ease-out, opacity 150ms ease-out;
+}
+.fromLeft2.visible2 {
+  opacity:1;
+  transform: translate(-210px,-105px);
+}
+
+
+#mescentres div{
+      font-size: 45px;
+  
+}
+
+#mescentres div a{
+  text-decoration: none;
+  color: black;
+}
+
+
+#compet{
+  position: relative;
+}
+
+.competence{
+  text-align: initial;
+  align: center;
+}
+.c1{
+  left: 50vh;
+  top: 25vh;
+}
+.c2{
+  left: 130vh;
+  top: 25vh;
+}
+#c{
+  margin-left: 20%;
+}
+
+
+div textarea {
+  width: 70%;
+  height: 100%;
+  text-align: center;
+  margin-top: 10%;
+  font-family: 'Montserrat', sans-serif;
+}
+input{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 65%;
+  text-align: center;
+  margin-top: 10%;
+  background-color: none;
+}
+form{
+  width: auto;
+  height: auto;
+  background-color: rgba(255,255,255,0.5) ;
+  text-align: center;
+  left: 7%;
+}
+#mes-contacts{
+  color: gray;
+  font-size: 65%;
+  background-color: rgba(255,255,255,0.5) ;
+  width: auto;
+  height: auto;
+  margin-left: 100vh;
+}
+
+
+
+.btn-navigation{
+  position: fixed;
+  left:30px;
+  top:30px;
+  z-index: 20;
+  cursor: pointer;
+}
+.btn-navigation .barre{
+  width: 30px;
+  height: 3px;
+  background: #111;
+  margin-top: 4px;
+}
+#menu{
+  position: fixed;
+  left: 0;
+  margin-left: -400px;
+  background: #333;
+  width: 20%;
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  z-index: 1;
+  transition: margin-left 0.5s;
+  text-align: center;
+    
+}
+#menu ul{
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  -webkite-transform: translateY(100%);
+    list-style: none;
+
+}
+
+
+
+#menu ul li a{
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: .070em;
+  font-weight: 900;
+}
+
+
+
+
+@media(max-width:780px){
+
+section{
+  width: 100vh;
+  height: 200vh;
+}
+
+h1{
+  font-size: 50px;
+}
+#nom{
+  font-size: 85px;
+}
+#annee{
+  font-size: 40px;
+}
+#boulot h2{
+  font-size: 40px;
+}
+#boulot p{
+  font-size: 25px;
+}
+#mesformations h2{
+  font-size: 33px;
+}
+#mesformations p{
+  font-size: 18px;
+}
+#mescentres ul li{
+  font-size: 50px;
+  color: white;
+}
+#competence{
+  width: 100px;
+}
+#html{
+  margin-left: 15%;
+  font-size: 30px;
+}
+#troll{
+  font-size: 15px;
+}
+#monnom,#email{
+        height: 50px;
+    font-size: 32px;
+        width: 250px;
+    }
+#envoyer{
+        width: 150px;
+        height: 30px;
+        font-size: 22px;
+        margin-bottom:10px;
+    }
+    #menu ul li{
+        margin-top: 45px;
+    }
+    #menu{
+        width: 250px;
+    }
+}
