@@ -25,15 +25,15 @@ Front-end:
   
   Le back-end est en court de conception, il permettra d'administrer les différentes sections.
   
-    1.Administration de la section page d'acceuil (possibilité d'ajouter, de modifier, de supprimer des éléments)
-    2.Administration de la section présentation (possibilité d'ajouter, de modifier, de supprimer des éléments)
-    3.Administration de la section expériences (possibilité d'ajouter, de modifier, de supprimer des éléments)
-    4.Administration de la section formations (possibilité d'ajouter, de modifier, de supprimer des éléments)
-    5.Administration de la section centre d'intêrets (possibilité d'ajouter, de modifier, de supprimer des éléments)
-    6.Administration de la section compétences (possibilité d'ajouter, de modifier, de supprimer des éléments)
-    7.Administration de la section gestion de projets (possibilité d'ajouter, de modifier, de supprimer des éléments)
-    8.Administration de la section formulaire (possibilité d'ajouter, de modifier, de supprimer des éléments)
-    9.Consultation des messages envoyer par l'intermédiaire du formulaire (possibilité de supprimer des éléments)
+    1. Administration de la section page d'acceuil (possibilité d'ajouter, de modifier, de supprimer des éléments)
+    2. Administration de la section présentation (possibilité d'ajouter, de modifier, de supprimer des éléments)
+    3. Administration de la section expériences (possibilité d'ajouter, de modifier, de supprimer des éléments)
+    4. Administration de la section formations (possibilité d'ajouter, de modifier, de supprimer des éléments)
+    5. Administration de la section centre d'intêrets (possibilité d'ajouter, de modifier, de supprimer des éléments)
+    6. Administration de la section compétences (possibilité d'ajouter, de modifier, de supprimer des éléments)
+    7. Administration de la section gestion de projets (possibilité d'ajouter, de modifier, de supprimer des éléments)
+    8. Administration de la section formulaire (possibilité d'ajouter, de modifier, de supprimer des éléments)
+    9. Consultation des messages envoyer par l'intermédiaire du formulaire (possibilité de supprimer des éléments)
   
   # Technologies utilisées :
   
