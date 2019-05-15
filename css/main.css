@@ -40,18 +40,31 @@ html{
   section:nth-of-type(3) { 
     background-image: url(../img/fond2.jpg);
   }
-/*
   section:nth-of-type(5) { 
     background-image: url(../img/space1.jpg);
   }
-*/
   section:nth-of-type(7){
     background-image:url(../img/fond3.jpg);
   }
 
+
+
+#cv{
+    margin-top: 5%;
+    width: 15%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    font-size:10px;
+    color: black;
+    text-decoration: none;
+}
+
+
 #nom{
     font-family: 'Montserrat', sans-serif;
     font-size: 65%;
+    margin-top: 15%;
   }
 #annee{
     font-size: 20%;
@@ -106,9 +119,7 @@ html{
 
 /* CENTRES D'INTERETS*/
 
-#cent{
-    background-color: black;
-}
+
 #mescentres{
     display: flex; 
     justify-content: space-around;
@@ -241,7 +252,7 @@ form{
 }
 #menu ul{
   position: absolute;
-  top: 35%;
+  top: 32%;
   transform: translateY(-50%);
   -webkite-transform: translateY(100%);
     list-style: none;
@@ -259,8 +270,37 @@ form{
   font-weight: 900;
 }
 
+.container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
 
+.projet{
+    width: 55%;
+    height: 150px;
+    margin: 5%;
+}
 
+#projet1{
+    background-image: url(../img/skate1.jpg);
+    background-size: 100%;
+}
+
+#projet2{
+    background-image: url(../img/skate1.jpg);
+    background-size: 100%;
+}
+
+#projet3{
+    background-image: url(../img/skate1.jpg);
+    background-size: 100%;
+}
+
+#projet4{
+    background-image: url(../img/skate1.jpg);
+    background-size: 100%;
+}
 
 @media(max-width:780px){
 
