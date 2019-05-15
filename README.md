@@ -41,7 +41,7 @@ Front-end:
   
   # Instruction d'installation : 
   
-  1. Cloner le projet git clone 
+  1. Cloner le projet git clone https://github.com/Mpreard/Portfolio.git
   2. Installer un serveur WEB pour exécuter du PHP
   3. Installer PostgreSQL
   4. Créer une base de données depuis pgAdmin
