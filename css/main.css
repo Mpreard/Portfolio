@@ -38,11 +38,13 @@ html{
     background-image: url(../img/fond1.jpg); 
   }
   section:nth-of-type(3) { 
-    background-image: url(../img/fond2.jpg); 
+    background-image: url(../img/fond2.jpg);
   }
+/*
   section:nth-of-type(5) { 
-    background-image: url(../img/space1.jpg); 
+    background-image: url(../img/space1.jpg);
   }
+*/
   section:nth-of-type(7){
     background-image:url(../img/fond3.jpg);
   }
@@ -56,8 +58,10 @@ html{
     font-family: 'Montserrat', sans-serif;
   }
 #photo{
+    background-image: url(../img/photo.png);
+    background-size: 100%;
     width: 25%;
-    height: auto;
+    height: 350px;
     border-radius: 55%;
   }
 .pop{
@@ -99,67 +103,82 @@ html{
   left: 0;;
   top: 0;
 }
-.fromLeft {
-  opacity:0;
-  transform: translate(-1000px, -100px);
-  transition: transform 1100ms ease-out, opacity 150ms ease-out;
-}
-.fromLeft.visible {
-  opacity:1;
-  transform: translate(-152px,-100px);
-}
 
-.fromLeft1 {
-  opacity:0;
-  transform: translate(-1000px, -150px);
-  transition: transform 1100ms ease-out, opacity 150ms ease-out;
-}
-.fromLeft1.visible1 {
-  opacity:1;
-  transform: translate(-152px,-140px);
-}
+/* CENTRES D'INTERETS*/
 
-.fromLeft2 {
-  opacity:0;
-  transform: translate(-1000px, -35px);
-  transition: transform 1100ms ease-out, opacity 150ms ease-out;
+#cent{
+    background-color: black;
 }
-.fromLeft2.visible2 {
-  opacity:1;
-  transform: translate(-210px,-105px);
+#mescentres{
+    display: flex; 
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    text-align: center;
 }
 
 
-#mescentres div{
-      font-size: 45px;
-  
+.center{
+    height: auto;
 }
 
-#mescentres div a{
-  text-decoration: none;
-  color: black;
+.back{
+    z-index: 0;
+    width: 33%;
+    min-height: 100vh;
+    text-align: center;
+    background-size: 100%;
 }
 
 
-#compet{
-  position: relative;
+#back0{
+   
+     background-image: url(../img/basketimg.jpg);
+     filter:url(#blur-1);
+     filter: blur(0px);
+}
+
+#back1{
+    background-image: url(../img/skate1.jpg);
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#back2{
+    background-image: url(../img/lecture.jpg);
+    
+}
+
+#mescentres h1{
+    z-index: 1;
+    margin-top: 70%;
+    color: white;
+    font-size: 50px;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+
+}
+
+
+
+
+
+
+/* FIN CENTRES D'INTERETS*/
+
+
+
+#generalCompetence{
+    display: flex; 
+    justify-content: space-around;
 }
 
 .competence{
-  text-align: initial;
-  align: center;
+  text-align: center;
+    margin: 10%;
 }
-.c1{
-  left: 50vh;
-  top: 25vh;
-}
-.c2{
-  left: 130vh;
-  top: 25vh;
-}
-#c{
-  margin-left: 20%;
-}
+
+
+
 
 
 div textarea {
@@ -271,9 +290,8 @@ h1{
 #mesformations p{
   font-size: 18px;
 }
-#mescentres ul li{
-  font-size: 50px;
-  color: white;
+#mescentres{
+  text-align: center;
 }
 #competence{
   width: 100px;

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Portfolio de Maxime PREARD.">
+    <meta name="keywords" content="Portfolio CV Stage Etudiant Informatique HTML CSS Ecole Entreprise Projet ">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<body>
+    <section class="textoverpic">
+        <h1 id="nom">Maxime Préard</h1>
+        <h2 id="annee">2018 &bull; 2019</h2>
+        <div class="btn-navigation" onclick="cache(menu)">
+            <div class="barre"></div>
+            <div class="barre"></div>
+            <div class="barre"></div>
+          </div>
+          
+          <div id="menu">
+            <ul>
+              <li onclick="cache(menu)">
+                <a href="#pop">Expériences</a>
+              </li>
+              <li onclick="cache(menu)">
+                  <a href="#fif">Formations </a>
+              </li>
+              <li onclick="cache(menu)">
+                  <a href="#cent">Centres d'intérêts</a>
+              </li>
+              <li onclick="cache(menu)">
+                  <a href="#compet">Compétences</a>
+              </li>
+              <li onclick="cache(menu)">
+                <a href="#formumu">Contact</a>
+            </li>
+            </ul>
+          </div>
+      </section>
+      
+      <section id="iconet">
+        <h1>Je m'appelle Maxime Préard, étudiant en première année à Ynov Campus Nantes.</br> Voici mon portfolio !</h1>
+        <div id="photo"></div>
+      </section>
+      
+      <section class="pop" id="pop">
+    
+          <div id="boulot">
+              <h2> Sogeti-Cap Gemini </h2>
+              <p><em> Stagiaire </em> &bull; Décembre 2014</p>
+
+              <h2> Garde d'enfants </h2>
+              <p><em> Interimaire </em> &bull; 2015 - Aujourd'hui</p>
+
+              <h2> Travail chez le particulier </h2>
+              <p><em> Interimaire </em> &bull; 2015 - Aujourd'hui </p>
+
+              <h2> Quiksilver / Roxy </h2>
+              <p><em> Vendeur </em> &bull; Novembre 2018 - Aujourd'hui</p>
+              </div>
+      </section>
+      
+      <section id="fif">
+          <div id="mesformations">
+            <h2> Nantes Ynov Campus </h2>
+            <p><em> Ingésup </em> &bull; 2018 - Aujourd'hui</p>
+            <p> Cette école me permet d'approfondir mes connaissances en informatique. De nombreux travaux <br>de groupe sont organisés, celà oblige donc à s'organiser et à communiquer avec les membres de son groupe <br> afin de réussir les différents projets,ce qui rappelle le modèle d'entreprise.</p>
+    
+            <h2> Lycée Eugène Livet </h2>
+            <p><em> STI2D option SIN </em> &bull; 2015 - 2018</p>
+            <p> Ce lycée m'a permis de découvrir les bases de l'informatique grâce à ma spécialité <br> Système d'Information Numérique. Un projet de plusieurs mois est obligatoire, celà permet <br>d'effectuer des tâches concrètes et plus seulement théorique. </p>
+          </div>
+      </section>
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+      <section id="cent"> 
+        <div id="mescentres">
+            <div id="back0" class="back"><div id="basket" class="center"><h1>BASKETBALL</h1></div></div>
+            <div id="back1" class="back"><div id="skate"  class="center"><h1>SKATEBOARD</h1></div></div>
+            <div id="back2" class="back"><div id="lecture"class="center"><h1>LECTURE</h1></div></div>
+          </div>
+            
+      </section>
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+      <section id="compet">
+         <div id="generalCompetence">
+          <div class="competence">
+            <canvas id="myCanvas1" width="auto" height="250"></canvas>
+          <script>
+            var canvas = document.getElementById('myCanvas1');
+            var context = canvas.getContext('2d');
+            var x = canvas.width / 2;
+            var y = canvas.height / 2;
+            var radius = 75;
+            var startAngle = 1.1 * Math.PI;
+            var endAngle = 1.9 * Math.PI;
+            var counterClockwise = false;
+      
+            context.beginPath()
+            context.arc(100, 100, 90, 0.8*Math.PI, -0.5*Math.PI, 2*Math.PI);
+            context.lineWidth = 10;
+      
+            // line color
+            context.strokeStyle = 'orange';
+            context.stroke();
+          </script> 
+          <p id="html"> HTML/CSS</p>
+          </div>
+          
+                    <div class="competence">
+            <canvas id="myCanvas2" width="auto" height="250"></canvas>
+          <script>
+            var canvas = document.getElementById('myCanvas2');
+            var context = canvas.getContext('2d');
+            var x = canvas.width / 2;
+            var y = canvas.height / 2;
+            var radius = 75;
+            var startAngle = 1.1 * Math.PI;
+            var endAngle = 1.9 * Math.PI;
+            var counterClockwise = false;
+      
+            context.beginPath()
+            context.arc(100, 100, 90, 0.8*Math.PI, -0.5*Math.PI, 2*Math.PI);
+            context.lineWidth = 10;
+      
+            // line color
+            context.strokeStyle = 'orange';
+            context.stroke();
+          </script> 
+          <p id="JS"> JavaScript</p>
+          </div>
+          
+          
+                              <div class="competence">
+            <canvas id="myCanvas3" width="auto" height="250"></canvas>
+          <script>
+            var canvas = document.getElementById('myCanvas3');
+            var context = canvas.getContext('2d');
+            var x = canvas.width / 2;
+            var y = canvas.height / 2;
+            var radius = 75;
+            var startAngle = 1.1 * Math.PI;
+            var endAngle = 1.9 * Math.PI;
+            var counterClockwise = false;
+      
+            context.beginPath()
+            context.arc(100, 100, 90, 0.8*Math.PI, -0.5*Math.PI, 2*Math.PI);
+            context.lineWidth = 10;
+      
+            // line color
+            context.strokeStyle = 'orange';
+            context.stroke();
+          </script> 
+          <p id="PHP">PHP </p>
+          </div>
+    </div>
+        </section>
+
+        <section id="formumu">
+            <form>
+                <div id="formulaire">
+                    <input placeholder="Nom" id="monnom" name="monnom"/>
+                </div>
+                <div>
+                    <input placeholder="Adresse Email" id="email" name="email"/>
+                </div>
+                <div>
+                    <textarea placeholder="Ecrivez votre message ici..." cols="60px" rows="10px" name="message"></textarea>
+                </div>
+                <div>
+                    <input value="Envoyer" type="submit" id="envoyer" name="envoyer" />
+                </div>
+            </form>
+            
+            
+        </section>
+        
+<script src="js/java.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

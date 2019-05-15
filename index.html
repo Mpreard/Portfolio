@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Portfolio de Maxime PREARD.">
+    <meta name="keywords" content="Portfolio CV Stage Etudiant Informatique HTML CSS Ecole Entreprise Projet ">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
@@ -14,6 +16,7 @@
     <section class="textoverpic">
         <h1 id="nom">Maxime Préard</h1>
         <h2 id="annee">2018 &bull; 2019</h2>
+        <div id="cv"> <p> Télécharger mon CV </p></div>
         <div class="btn-navigation" onclick="cache(menu)">
             <div class="barre"></div>
             <div class="barre"></div>
@@ -43,7 +46,7 @@
       
       <section id="iconet">
         <h1>Je m'appelle Maxime Préard, étudiant en première année à Ynov Campus Nantes.</br> Voici mon portfolio !</h1>
-        <img src="img/icone.jpg" id="photo"></img>
+        <div id="photo"></div>
       </section>
       
       <section class="pop" id="pop">
@@ -75,23 +78,20 @@
           </div>
       </section>
 
-      <section id="cent"> 
+     
+     <section id="cent"> 
         <div id="mescentres">
+            <div id="back0" class="back"><div id="basket" class="center"><h1>BASKETBALL</h1></div></div>
             
-            <div class="slideButton"><a href="##"> Basketball</a> </div>
-            <div class="basket"><img src="img/ballon.gif" class="fromLeft"></div>
-                
-            <div class="slideButton1"><a href="##"> Skateboard</a> </div>
-            <div class="skate"><img src="img/skateboar.gif" class="fromLeft1"></div>
-            
-            <div class="slideButton2"><a href="##"> Lecture </a></div>
-            <div class="cinema"><img src="img/ecole-livres-631.gif" class="fromLeft2"></div>
-            
+            <div id="back1" class="back"><div id="skate"  class="center"><h1>SKATEBOARD</h1></div></div>
+            <div id="back2" class="back"><div id="lecture"class="center"><h1>LECTURE</h1></div></div>
           </div>
+            
       </section>
 
       <section id="compet">
-          <div class="competence c1">
+         <div id="generalCompetence">
+          <div class="competence">
             <canvas id="myCanvas1" width="auto" height="250"></canvas>
           <script>
             var canvas = document.getElementById('myCanvas1');
@@ -113,7 +113,54 @@
           </script> 
           <p id="html"> HTML/CSS</p>
           </div>
-
+          
+                    <div class="competence">
+            <canvas id="myCanvas2" width="auto" height="250"></canvas>
+          <script>
+            var canvas = document.getElementById('myCanvas2');
+            var context = canvas.getContext('2d');
+            var x = canvas.width / 2;
+            var y = canvas.height / 2;
+            var radius = 75;
+            var startAngle = 1.1 * Math.PI;
+            var endAngle = 1.9 * Math.PI;
+            var counterClockwise = false;
+      
+            context.beginPath()
+            context.arc(100, 100, 90, 0.8*Math.PI, -0.5*Math.PI, 2*Math.PI);
+            context.lineWidth = 10;
+      
+            // line color
+            context.strokeStyle = 'orange';
+            context.stroke();
+          </script> 
+          <p id="JS"> JavaScript</p>
+          </div>
+          
+          
+                              <div class="competence">
+            <canvas id="myCanvas3" width="auto" height="250"></canvas>
+          <script>
+            var canvas = document.getElementById('myCanvas3');
+            var context = canvas.getContext('2d');
+            var x = canvas.width / 2;
+            var y = canvas.height / 2;
+            var radius = 75;
+            var startAngle = 1.1 * Math.PI;
+            var endAngle = 1.9 * Math.PI;
+            var counterClockwise = false;
+      
+            context.beginPath()
+            context.arc(100, 100, 90, 0.8*Math.PI, -0.5*Math.PI, 2*Math.PI);
+            context.lineWidth = 10;
+      
+            // line color
+            context.strokeStyle = 'orange';
+            context.stroke();
+          </script> 
+          <p id="PHP">PHP </p>
+          </div>
+    </div>
         </section>
 
         <section id="formumu">
