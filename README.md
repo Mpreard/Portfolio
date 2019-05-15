@@ -11,21 +11,21 @@ Mon portfolio est sous la forme d'un one page, divisé en différentes sections.
 Front-end:
 -
 
-  -Section page d'acceuil
-  -Section présentation
-  -Section expériences
-  -Section formations
-  -Section centres d'intêrets
-  -Section compétences
-  -Section gestion de projets
-  -Section formulaire
+   1. Section page d'acceuil
+   2. Section présentation
+   3. Section expériences
+   4. Section formations
+   5. Section centres d'intêrets
+   6. Section compétences
+   7. Section gestion de projets
+   8. Section formulaire
   
   Back-end:
   -
   
   Le back-end est en court de conception, il permettra d'administrer les différentes sections.
   
-  -Administration de la section page d'acceuil (possibilité d'ajouter, de modifier, de supprimer des éléments)
+    1.Administration de la section page d'acceuil (possibilité d'ajouter, de modifier, de supprimer des éléments)
   -Administration de la section présentation (possibilité d'ajouter, de modifier, de supprimer des éléments)
   -Administration de la section expériences (possibilité d'ajouter, de modifier, de supprimer des éléments)
   -Administration de la section formations (possibilité d'ajouter, de modifier, de supprimer des éléments)
