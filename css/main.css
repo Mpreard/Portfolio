@@ -41,7 +41,7 @@ html{
     background-image: url(../img/fond2.jpg);
   }
   section:nth-of-type(5) { 
-    background-image: url(../img/space1.jpg);
+    background-color: black;
   }
   section:nth-of-type(7){
     background-image:url(../img/fond3.jpg);
@@ -58,6 +58,7 @@ html{
     font-size:10px;
     color: black;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -260,6 +261,11 @@ form{
 }
 
 
+form{
+    background-color: grey;
+    z-index: 0;
+    height: 100%;
+}
 
 #menu ul li a{
   color: white;
@@ -280,25 +286,30 @@ form{
     width: 55%;
     height: 150px;
     margin: 5%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
 }
 
 #projet1{
-    background-image: url(../img/skate1.jpg);
+    background-image: url(../img/FOND.PNG);
     background-size: 100%;
 }
 
 #projet2{
-    background-image: url(../img/skate1.jpg);
+    background-image: url(../img/space1.jpg);
     background-size: 100%;
+    color: white;
 }
 
 #projet3{
-    background-image: url(../img/skate1.jpg);
+    background-image: url(../img/plante.jpg);
     background-size: 100%;
 }
 
 #projet4{
-    background-image: url(../img/skate1.jpg);
+    background-image: url(../img/infra.jpg);
     background-size: 100%;
 }
 
