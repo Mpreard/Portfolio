@@ -4,11 +4,12 @@
 
 Dans le cadre d'un projet à réaliser pour mes études à Ynov Campus Nantes, il m'a été demandé de créer un Portfolio en ligne qui soit administrable.
 
-Les fonctionnalités : 
+# Les fonctionnalités : 
 
 Mon portfolio est sous la forme d'un one page, divisé en différentes sections. Dans chaque section se trouve les différentes informations sur mon profil.
 
 Front-end:
+-
 
   -Section page d'acceuil
   -Section présentation
@@ -20,6 +21,7 @@ Front-end:
   -Section formulaire
   
   Back-end:
+  -
   
   Le back-end est en court de conception, il permettra d'administrer les différentes sections.
   
@@ -33,11 +35,11 @@ Front-end:
   -Administration de la section formulaire (possibilité d'ajouter, de modifier, de supprimer des éléments)
   -Consultation des messages envoyer par l'intermédiaire du formulaire (possibilité de supprimer des éléments)
   
-  Technologies utilisées :
+  # Technologies utilisées :
   
   HTML | CSS | JavaScript | PHP
   
-  Instruction d'installation : 
+  # Instruction d'installation : 
   
   1. Cloner le projet git clone 
   2. Installer un serveur WEB pour exécuter du PHP
