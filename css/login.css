@@ -1,0 +1,8 @@
+form{
+    text-align: center;
+    margin:20%;
+}
+
+label,input, button{
+    margin-top:5%;
+}

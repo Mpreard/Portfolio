@@ -5,7 +5,7 @@
 -- Dumped from database version 11.1
 -- Dumped by pg_dump version 11.1
 
--- Started on 2019-05-15 15:28:15
+-- Started on 2019-06-01 17:44:23
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -40,8 +40,9 @@ CREATE TABLE sql_portfolio.accueil (
     id integer,
     prenom_acc character(50),
     nom_acc character(50),
-    background_acc character varying(50),
-    cv_acc character varying(50)
+    cv_acc character varying(50),
+    date_debut character varying(255),
+    date_fin character varying(255)
 );
 
 
@@ -54,8 +55,8 @@ ALTER TABLE sql_portfolio.accueil OWNER TO postgres;
 
 CREATE TABLE sql_portfolio.burger_menu (
     id_menu integer,
-    categories_menu character(50),
-    background_menu character varying(50)
+    link_menu character varying(255),
+    name_menu character varying(255)
 );
 
 
@@ -68,8 +69,9 @@ ALTER TABLE sql_portfolio.burger_menu OWNER TO postgres;
 
 CREATE TABLE sql_portfolio.centres_interets (
     id_centre integer,
-    text_centre character varying(50),
-    gif_centre character varying(50)
+    centre1 character varying(255),
+    centre2 character varying(255),
+    centre3 character varying(255)
 );
 
 
@@ -82,9 +84,12 @@ ALTER TABLE sql_portfolio.centres_interets OWNER TO postgres;
 
 CREATE TABLE sql_portfolio.competences (
     id_competence integer,
-    background_competence character varying(50),
-    valeur_competence character varying(50),
-    nom_competence character(50)
+    valeur_competence1 character varying(255),
+    valeur_competence2 character varying(255),
+    valeur_competence3 character varying(255),
+    nom_competence1 character varying(255),
+    nom_competence2 character varying(255),
+    nom_competence3 character varying(255)
 );
 
 
@@ -97,11 +102,10 @@ ALTER TABLE sql_portfolio.competences OWNER TO postgres;
 
 CREATE TABLE sql_portfolio.experiences (
     id_experience integer,
-    background_experience character varying(50),
     travail_experience character(50),
-    "dateDebut_experience" date,
-    "dateFin_experience" date,
-    poste_experience character(50)
+    poste_experience character(50),
+    datedebut_exp character varying(255),
+    datefin_exp character varying(255)
 );
 
 
@@ -134,7 +138,7 @@ CREATE TABLE sql_portfolio.formulaire (
     nom_formulaire character varying(50),
     mail_formulaire character varying(50),
     text_formulaire character varying(50),
-    "btnSend_formulaire" character varying(50)
+    prenom_formulaire character varying(255)
 );
 
 
@@ -147,8 +151,10 @@ ALTER TABLE sql_portfolio.formulaire OWNER TO postgres;
 
 CREATE TABLE sql_portfolio.gestion_projet (
     id_projet integer,
-    projet_projet character varying(255),
-    background_projet character varying(50)
+    projet1 character varying(255),
+    projet2 character varying(255),
+    projet3 character varying(255),
+    projet4 character varying(255)
 );
 
 
@@ -169,62 +175,83 @@ CREATE TABLE sql_portfolio.presentation (
 ALTER TABLE sql_portfolio.presentation OWNER TO postgres;
 
 --
--- TOC entry 2891 (class 0 OID 16483)
+-- TOC entry 225 (class 1259 OID 24717)
+-- Name: user; Type: TABLE; Schema: sql_portfolio; Owner: postgres
+--
+
+CREATE TABLE sql_portfolio."user" (
+    identifiant character varying(255),
+    mdp character varying(255)
+);
+
+
+ALTER TABLE sql_portfolio."user" OWNER TO postgres;
+
+--
+-- TOC entry 2906 (class 0 OID 16483)
 -- Dependencies: 215
 -- Data for Name: accueil; Type: TABLE DATA; Schema: sql_portfolio; Owner: postgres
 --
 
-COPY sql_portfolio.accueil (id, prenom_acc, nom_acc, background_acc, cv_acc) FROM stdin;
-1	Maxime                                            	Préard                                            	#0F444	http://maximecv.fr
+COPY sql_portfolio.accueil (id, prenom_acc, nom_acc, cv_acc, date_debut, date_fin) FROM stdin;
+1	maxime                                            	PREARD                                            	CV-PREARD.pdf	2018	2019
 \.
 
 
 --
--- TOC entry 2899 (class 0 OID 16516)
+-- TOC entry 2914 (class 0 OID 16516)
 -- Dependencies: 223
 -- Data for Name: burger_menu; Type: TABLE DATA; Schema: sql_portfolio; Owner: postgres
 --
 
-COPY sql_portfolio.burger_menu (id_menu, categories_menu, background_menu) FROM stdin;
-2	gestion de projet                                 	#F0000
+COPY sql_portfolio.burger_menu (id_menu, link_menu, name_menu) FROM stdin;
+1	#pop	Expériences
+2	#fif	Formations
+3	#cent	Centres d'interêts
+4	#compet	Compétences
+5	#projets	Gestion de projets
+6	#formumu	Contact
 \.
 
 
 --
--- TOC entry 2895 (class 0 OID 16504)
+-- TOC entry 2910 (class 0 OID 16504)
 -- Dependencies: 219
 -- Data for Name: centres_interets; Type: TABLE DATA; Schema: sql_portfolio; Owner: postgres
 --
 
-COPY sql_portfolio.centres_interets (id_centre, text_centre, gif_centre) FROM stdin;
-3	Mes centres d interets sont les suivants	url:../img/gif
+COPY sql_portfolio.centres_interets (id_centre, centre1, centre2, centre3) FROM stdin;
+3	Basket	Skate	Lecture
 \.
 
 
 --
--- TOC entry 2896 (class 0 OID 16507)
+-- TOC entry 2911 (class 0 OID 16507)
 -- Dependencies: 220
 -- Data for Name: competences; Type: TABLE DATA; Schema: sql_portfolio; Owner: postgres
 --
 
-COPY sql_portfolio.competences (id_competence, background_competence, valeur_competence, nom_competence) FROM stdin;
-4	#F0125	20%	HTML                                              
+COPY sql_portfolio.competences (id_competence, valeur_competence1, valeur_competence2, valeur_competence3, nom_competence1, nom_competence2, nom_competence3) FROM stdin;
+4	75%	35%	20%	HTML/CSS	Javascript	PHP
 \.
 
 
 --
--- TOC entry 2893 (class 0 OID 16495)
+-- TOC entry 2908 (class 0 OID 16495)
 -- Dependencies: 217
 -- Data for Name: experiences; Type: TABLE DATA; Schema: sql_portfolio; Owner: postgres
 --
 
-COPY sql_portfolio.experiences (id_experience, background_experience, travail_experience, "dateDebut_experience", "dateFin_experience", poste_experience) FROM stdin;
-5	#F0155	Quiksilver                                        	2018-02-15	2019-04-11	Stagiaire                                         
+COPY sql_portfolio.experiences (id_experience, travail_experience, poste_experience, datedebut_exp, datefin_exp) FROM stdin;
+1	Sogeti-Cap Gemini                                 	Stagiaire                                         	Décembre 2014	Janvier 2015
+2	Garde d'enfants                                   	Intérimaire                                       	2015	Aujourd'hui
+3	Travail chez le particulier                       	Intérimaire                                       	2015	Aujourd'hui
+4	Quiksilver / Roxy                                 	Vendeur                                           	2018	Aujourd'hui
 \.
 
 
 --
--- TOC entry 2894 (class 0 OID 16498)
+-- TOC entry 2909 (class 0 OID 16498)
 -- Dependencies: 218
 -- Data for Name: formations; Type: TABLE DATA; Schema: sql_portfolio; Owner: postgres
 --
@@ -235,39 +262,50 @@ COPY sql_portfolio.formations (id_formation, ecole_formation, type_formation, "d
 
 
 --
--- TOC entry 2897 (class 0 OID 16510)
+-- TOC entry 2912 (class 0 OID 16510)
 -- Dependencies: 221
 -- Data for Name: formulaire; Type: TABLE DATA; Schema: sql_portfolio; Owner: postgres
 --
 
-COPY sql_portfolio.formulaire (id_formulaire, nom_formulaire, mail_formulaire, text_formulaire, "btnSend_formulaire") FROM stdin;
-7	Henry	henry.contact@gmail.com	Je souhaite vous contacter afin de ...	Envoyer
+COPY sql_portfolio.formulaire (id_formulaire, nom_formulaire, mail_formulaire, text_formulaire, prenom_formulaire) FROM stdin;
 \.
 
 
 --
--- TOC entry 2898 (class 0 OID 16513)
+-- TOC entry 2913 (class 0 OID 16513)
 -- Dependencies: 222
 -- Data for Name: gestion_projet; Type: TABLE DATA; Schema: sql_portfolio; Owner: postgres
 --
 
-COPY sql_portfolio.gestion_projet (id_projet, projet_projet, background_projet) FROM stdin;
-8	Y-days	#F0215
+COPY sql_portfolio.gestion_projet (id_projet, projet1, projet2, projet3, projet4) FROM stdin;
+8	\N	\N	\N	\N
+8	Y-days	Portfolio	Projet plante connectée	Projet infrastructure réseau
 \.
 
 
 --
--- TOC entry 2892 (class 0 OID 16492)
+-- TOC entry 2907 (class 0 OID 16492)
 -- Dependencies: 216
 -- Data for Name: presentation; Type: TABLE DATA; Schema: sql_portfolio; Owner: postgres
 --
 
 COPY sql_portfolio.presentation (id_presentation, text_presentation, "photo_présentation") FROM stdin;
-9	Je m appelle maxime et j ai ...                                                                                                                                                                                                                                	url:../img/photo_presentation
+1	  Je m'appelle Maxime Préard, étudiant en première année à Ynov Campus Nantes.</br> Voici mon portfolio !                                                                                                                                                      	../img/photo.png
 \.
 
 
--- Completed on 2019-05-15 15:28:15
+--
+-- TOC entry 2915 (class 0 OID 24717)
+-- Dependencies: 225
+-- Data for Name: user; Type: TABLE DATA; Schema: sql_portfolio; Owner: postgres
+--
+
+COPY sql_portfolio."user" (identifiant, mdp) FROM stdin;
+maxime.preard@hotmail.fr	$2y$10$78CaqkYZ/3hLRH3YqrPdYe565TCSm6V.12Sm5LBKQfEQKGPmzeSUO
+\.
+
+
+-- Completed on 2019-06-01 17:44:23
 
 --
 -- PostgreSQL database dump complete

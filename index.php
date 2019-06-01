@@ -1,3 +1,47 @@
+<?php
+try {
+    $db= new PDO('pgsql: user=postgres password=7b3097628 dbname=SQLTest host=127.0.0.1');
+} catch (PDOException $e) {
+    echo 'Connexion échouée : '.$e->getMessage();
+}  
+    $header = $db ->prepare('SELECT * FROM sql_portfolio.accueil');
+    $header -> execute();
+    $headerData = $header->fetchAll(PDO::FETCH_ASSOC);
+    
+    $menu = $db ->prepare('SELECT * FROM sql_portfolio.burger_menu');
+    $menu -> execute();
+    $menuData = $menu->fetchAll(PDO::FETCH_ASSOC);
+
+    $presentation = $db ->prepare('SELECT * FROM sql_portfolio.presentation');
+    $presentation -> execute();
+    $presentationData = $presentation->fetchAll(PDO::FETCH_ASSOC);
+
+    $experience = $db ->prepare('SELECT * FROM sql_portfolio.experiences');
+    $experience -> execute();
+    $experienceData = $experience->fetchAll(PDO::FETCH_ASSOC);
+
+    $formation = $db ->prepare('SELECT * FROM sql_portfolio.formations');
+    $formation -> execute();
+    $formationData = $formation->fetchAll(PDO::FETCH_ASSOC);
+
+    $centre = $db ->prepare('SELECT * FROM sql_portfolio.centres_interets');
+    $centre -> execute();
+    $centreData = $centre->fetchAll(PDO::FETCH_ASSOC);
+
+    $competence = $db ->prepare('SELECT * FROM sql_portfolio.competences');
+    $competence -> execute();
+    $competenceData = $competence->fetchAll(PDO::FETCH_ASSOC);
+
+    $gestion = $db ->prepare('SELECT * FROM sql_portfolio.gestion_projet');
+    $gestion -> execute();
+    $gestionData = $gestion->fetchAll(PDO::FETCH_ASSOC);
+
+    $contact = $db ->prepare('SELECT * FROM sql_portfolio.formulaire');
+    $contact -> execute();
+    $contactData = $contact->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,14 +54,21 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="main.js"></script>
 </head>
 <body>
     <section class="textoverpic">
-        <h1 id="nom">Maxime Préard</h1>
-        <h2 id="annee">2018 &bull; 2019</h2>
+     <div id="button_admin">
+      <a id="admin" href="login.php"><button type="button" class="btn btn-outline-dark">Connexion admin</button>
+</a></div>
+       <?php    
+        foreach ($headerData as $k => $accueil): ?>
+        <h1 id="nom"><?= $accueil['prenom_acc'].$accueil['nom_acc'] ?> </h1>
+        <h2 id="annee"><?= $accueil['date_debut']?> &bull; <?= $accueil['date_fin']?></h2>
         
-        <a href="#" id="cv"><div> <p> Télécharger mon CV </p></div></a>
+        <a href=<?= $accueil['cv_acc']?> download="CV_PREARD.pdf" id="cv"><div> <p> Télécharger mon CV </p></div></a>
+        <?php endforeach ?>
         
         <div class="btn-navigation" onclick="cache(menu)">
             <div class="barre"></div>
@@ -27,47 +78,32 @@
           
           <div id="menu">
             <ul>
+              <?php foreach ($menuData as $k => $accueil): ?>
               <li onclick="cache(menu)">
-                <a href="#pop">Expériences</a>
+                <a href="<?= $accueil['link_menu']?>"><?= $accueil['name_menu']?></a>
               </li>
-              <li onclick="cache(menu)">
-                  <a href="#fif">Formations </a>
-              </li>
-              <li onclick="cache(menu)">
-                  <a href="#cent">Centres d'intérêts</a>
-              </li>
-              <li onclick="cache(menu)">
-                  <a href="#compet">Compétences</a>
-              </li>
-              <li onclick="cache(menu)">
-                  <a href="#projets">Mes projets</a>
-              </li>
-              <li onclick="cache(menu)">
-                <a href="#formumu">Contact</a>
-            </li>
+            <?php endforeach ?>
             </ul>
           </div>
       </section>
       
       <section id="iconet">
-        <h1>Je m'appelle Maxime Préard, étudiant en première année à Ynov Campus Nantes.</br> Voici mon portfolio !</h1>
+      
+      <?php foreach ($presentationData as $k => $pres):?>
+        <h1><?= $pres['text_presentation']?></h1>
+      <?php endforeach ?>
         <div id="photo"></div>
+        
+
       </section>
       
       <section class="pop" id="pop">
     
           <div id="boulot">
-              <h2> Sogeti-Cap Gemini </h2>
-              <p><em> Stagiaire </em> &bull; Décembre 2014</p>
-
-              <h2> Garde d'enfants </h2>
-              <p><em> Interimaire </em> &bull; 2015 - Aujourd'hui</p>
-
-              <h2> Travail chez le particulier </h2>
-              <p><em> Interimaire </em> &bull; 2015 - Aujourd'hui </p>
-
-              <h2> Quiksilver / Roxy </h2>
-              <p><em> Vendeur </em> &bull; Novembre 2018 - Aujourd'hui</p>
+              <?php foreach ($experienceData as $k => $exp):?>
+              <h2><?= $exp['travail_experience']?></h2>
+              <p><em><?= $exp['poste_experience']?></em> &bull; <?= $exp['datedebut_exp']?> - <?= $exp['datefin_exp']?></p>
+               <?php endforeach ?>
               </div>
       </section>
       
@@ -119,7 +155,7 @@
           <p id="html"> HTML/CSS</p>
           </div>
           
-                    <div class="competence">
+            <div class="competence">
             <canvas id="myCanvas2" width="auto" height="250"></canvas>
           <script>
             var canvas = document.getElementById('myCanvas2');
@@ -201,9 +237,7 @@
             
             
         </section>
-        
 <script src="js/java.js"></script>
 <script src="js/app.js"></script>
-
-</body>
+    </body>
 </html>

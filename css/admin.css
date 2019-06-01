@@ -1,0 +1,24 @@
+.containers{
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+.sections{
+    text-align: center;
+    width: 75%;
+}
+
+
+label,input{
+    display: block;
+    width: 100%;
+}
+
+.modal-content{
+    width: 120% !important;
+}
+
+#competence{
+    text-align: center;
+}
