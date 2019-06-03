@@ -59,7 +59,7 @@ try {
 <body>
     <section class="textoverpic">
      <div id="button_admin">
-      <a id="admin" href="login.php"><button type="button" class="btn btn-outline-dark">Connexion admin</button>
+            <a href="login.php"><button class="button button5">Connexion admin</button>
 </a></div>
        <?php    
         foreach ($headerData as $k => $accueil): ?>
@@ -216,7 +216,7 @@ try {
         </section>
 
         <section id="formumu">
-            <form>
+            <form method="get" action="">
                 <div id="formulaire">
                     <input placeholder="Nom" id="monnom" name="monnom"/>
                 </div>
