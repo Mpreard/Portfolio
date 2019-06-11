@@ -1,7 +1,6 @@
 <?php
 try {
     $db= new PDO('pgsql: user=postgres password=7b3097628 dbname=sqltest host=127.0.0.1');
-    $db-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo 'Connexion échouée : '.$e->getMessage();
 }  

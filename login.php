@@ -16,7 +16,7 @@ try {
 </head>
 <body>
                    
-<?php if(isset($_POST['identifiant'])&& isset($_POST['motdepasse'])) {
+<?php if(isset($_POST['identifiant']) && isset($_POST['motdepasse'])) {
     $email = $_POST['identifiant'];
     $password = $_POST['motdepasse'];
     if(strlen($email)>0 && (strlen($password)> 0)){
