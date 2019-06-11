@@ -1,6 +1,7 @@
 <?php
 try {
     $db= new PDO('pgsql: user=postgres password=7b3097628 dbname=sqltest host=127.0.0.1');
+    $db-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo 'Connexion échouée : '.$e->getMessage();
 }  
@@ -39,6 +40,25 @@ try {
     $contact = $db ->prepare('SELECT * FROM sql_portfolio.formulaire');
     $contact -> execute();
     $contactData = $contact->fetchAll(PDO::FETCH_ASSOC);
+
+
+if(isset($_POST['envoyer'])){
+$pdoStat = $db->prepare('INSERT INTO sql_portfolio.formulaire(nom_formulaire,prenom_formulaire,mail_formulaire,text_formulaire) VALUES (:nom,:prenom,:email,:message)');
+
+
+$pdoStat->bindValue('nom', $_POST['nomform']);
+
+$pdoStat->bindValue('prenom', $_POST['prenomform']);
+
+
+$pdoStat->bindValue('email', $_POST['emailform']);
+
+
+$pdoStat->bindValue('message', $_POST['messageform']);
+
+
+$pdoStat->execute();
+}
 ?>
 
 
@@ -216,18 +236,18 @@ try {
         </section>
 
         <section id="formumu">
-            <form method="get" action="">
+            <form method="post" action="">
                 <div id="formulaire">
-                    <input placeholder="Nom" id="monnom" name="monnom"/>
+                    <input placeholder="Nom" id="nomform" name="nomform" required/>
                 </div>
                 <div>
-                    <input placeholder="Prénom" id="monprenom" name="monprenom"/>
+                    <input placeholder="Prénom" id="prenomform" name="prenomform" required/>
                 </div>
                 <div>
-                    <input placeholder="Adresse Email" id="email" name="email"/>
+                    <input placeholder="Adresse Email" id="emailform" name="emailform" required/>
                 </div>
                 <div>
-                    <textarea placeholder="Ecrivez votre message ici..." cols="60px" rows="10px" name="message"></textarea>
+                    <textarea placeholder="Ecrivez votre message ici..." cols="60px" rows="10px" name="messageform" required></textarea>
                 </div>
                 <div>
                     <input value="Envoyer" type="submit" id="envoyer" name="envoyer" />

@@ -59,7 +59,7 @@ if(isset($_POST['text_pres'])&& isset($_POST['photo_présentation'])){
     $upPresentation -> execute([$textPresentation,$photoPresentation,$presentationData['id_presentation']]);
 }
 
-if(isset($_POST['prenom_accueil'])&& isset($_POST['prenom_accueil'])&& isset($_POST['nom_accueil'])&& isset($_POST['dateD_accueil'])&& isset($_POST['dateF_accueil'])&& isset($_POST['cv_accueil']) ){
+if(isset($_POST['prenom_accueil']))&& isset($_POST['nom_accueil'])&& isset($_POST['dateD_accueil'])&& isset($_POST['dateF_accueil'])&& isset($_POST['cv_accueil']) ){
     
     $prenom = $_POST['prenom_accueil'] == $prenom ? $prenom : $_POST['prenom_accueil'];
     $nom = $_POST['nom_accueil'] == $nom ? $nom : $_POST['nom_accueil'];
